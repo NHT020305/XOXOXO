@@ -8,6 +8,7 @@ Welcome to Tic Tac Toe, the classic game of strategy and skill! Perfect for play
  
 
 ## How to play
+
 **Objective**: The goal of Tic Tac Toe is to be the first player to align three of their symbols—either X or O—in a horizontal, vertical, or diagonal row on a 3x3 grid.
 
 **Turn-taking**: Players place their symbol (X for the first player and O for the second player) on an empty grid cell.
@@ -27,3 +28,8 @@ Welcome to Tic Tac Toe, the classic game of strategy and skill! Perfect for play
 2. CSS
 3. JavaScript
 4. NodeJS
+
+
+
+### Website link
+https://benevolent-mochi-e44ca0.netlify.app/
