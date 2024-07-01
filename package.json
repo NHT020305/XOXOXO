@@ -1,0 +1,14 @@
+{
+  "name": "xoxoxo",
+  "version": "1.0.0",
+  "description": "Getting started with Node and Express",
+  "main": "fun.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Huy Tung",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

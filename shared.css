@@ -1,0 +1,251 @@
+body {
+  background-image: url("/images/abstract-white-shapes-background_79603-1361.avif");
+  text-align: center;
+  font-family: "Pacifico", cursive;
+  margin: 0;
+  max-width: 100%;
+}
+
+#body-game {
+  background-image: url('/images/4990858.jpg')
+}
+
+#bar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 5px solid rgb(215, 187, 247);
+  box-shadow: 0 10px 10px rebeccapurple;
+  background-color: rgb(215, 187, 247);
+  top: 0;
+  position: fixed;
+  width: 100%;
+  overflow: hidden;
+  z-index: 2;
+}
+
+#bar #settings {
+  color: rebeccapurple;
+  margin-right: -810px;
+  margin-left: 20px;
+  background-color: rgb(215, 187, 247);
+  border-radius: 10px;
+  padding: 0;
+}
+
+#bar #settings:hover {
+  color: rgb(12, 4, 52);
+}
+
+#nav ul {
+  list-style-type: none;
+  padding: 10px 0 10px 0;
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+#nav li {
+  margin-right: 15px;
+  margin-left: 15px;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: "Shrikhand", serif;
+  font-size: 20px;
+  display: inline;
+  
+}
+
+#nav a {
+  color: rgb(12, 4, 52);
+  padding: 0.5rem 0.5rem;
+}
+
+#nav a:hover {
+  color: white;
+  background-color: rgb(12, 4, 52);
+  border-radius: 10px;
+  text-decoration: underline;
+}
+
+#bar a {
+  text-decoration: none;
+}
+
+#nav #account {
+  color: rebeccapurple;
+  position: relative;
+  margin-left: -10px;
+  top: 8px;
+}
+
+#nav #account:hover {
+  color: rgb(12, 4, 52);
+  background-color: rgb(215, 187, 247)
+}
+
+#bar #logo {
+  margin-right: 100px;
+  text-decoration: none;
+}
+
+#logo img {
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  margin-left: 10px;
+  margin-right: 5px;
+  border-radius: 10px;
+  margin-bottom: 0;
+}
+
+#logo-section {
+  width: 200px
+}
+
+#bar #logo-section p {
+  display: inline;
+  position: relative;
+  top: -15px;
+  font-size: 24px;
+  color: rebeccapurple;
+  text-decoration: none;
+}
+
+#bar #logo-section p:hover {
+  color: rgb(12, 4, 52)
+}
+
+h1 {
+  font-family: "Shrikhand", serif;
+  font-size: 54px;
+}
+
+header p {
+  font-size: 28px;
+}
+
+header span {
+  color: rgb(215, 187, 247);
+  font-family: "Pacifico", cursive;
+  font-size: 72px;
+  margin-left: 20px;
+}
+
+header {
+  background-color: rgb(12, 4, 52);
+  width: 100%;
+  height: 100%;
+  padding: 0.2rem 0 2rem 0;
+  text-align: center;
+  color: white;
+  margin-top: 70px;
+}
+
+#main {
+  margin-bottom: 120px;
+}
+
+#start-button {
+  list-style: none;
+  margin-top: -130px;
+  margin-left: 820px
+}
+
+.start {
+  text-decoration: none;
+  border-radius: 100px;
+  font-family: "Shrikhand", serif;
+  color: rgb(12, 4, 52);
+  background-color: rgba(215, 187, 247, 0.5);
+  border: 5px solid rgb(12, 4, 52);
+  position: relative;
+  margin-bottom: 30px;
+  display: block;
+  font-size: 36px;
+  box-shadow: 5px 5px rgb(12, 4, 52);
+  padding: 0.5rem;
+  width: 35%
+}
+
+#sign-up {
+  background-color: rgba(140,0, 255, 0.8);
+}
+
+#sign-up:hover {
+  background-color: rgb(140,0, 255);
+}
+
+#sign-in {
+  color: white;
+  background-color: rgba(12, 4, 52, 0.7);
+}
+
+#sign-in:hover {
+  background-color: rgba(12, 4, 52, 0.8);
+}
+
+.start:hover {
+  background-color: rgb(215, 187, 247);
+}
+
+#image-home {
+  width: 400px;
+  height: 400px;
+  margin-top: 70px;
+  margin-bottom: -220px;
+  border-radius: 100px;
+  margin-left: -300px;
+  box-shadow: 10px 20px 20px rebeccapurple;
+}
+
+@keyframes move {
+  0% {
+      left: -200px;
+  }
+  100% {
+      left: 0;
+  }
+}
+
+@keyframes hide {
+  0% {
+      left: 0;
+  }
+  100% {
+      left: -200px;
+  }
+}
+
+.setting-bar {
+  position: fixed;
+  top: 79px;
+  left: -200px;
+  width: 12%;
+  height: 90%;
+  border-left: 7px solid rgb(215, 187, 247);
+  background-color: rebeccapurple;
+  z-index: 2;
+  animation: move 0.2s ease-in-out forwards;
+  overflow: auto;
+  display: none;
+}
+
+.setting-bar a {
+  text-decoration: none;
+  color: black;
+  padding: 0.5rem;
+  font-size: 28px;
+  display: block;
+  margin-top: 1.5rem;
+  cursor: pointer;
+}
+
+.setting-bar a:hover {
+  color: rgb(215, 187, 247);
+  background-color: black;
+}

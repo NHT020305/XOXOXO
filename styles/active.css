@@ -1,0 +1,99 @@
+#game-active {
+    display: none;
+}
+
+#game-active article {
+    display: inline-block;
+    color: white;
+    border: 5px solid rgb(12, 4, 52);
+    background: rebeccapurple;
+    width: 1000px;
+    padding: 0 3rem 3rem 3rem;
+    display: none;
+    border-radius: 50px;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    box-shadow: 10px 10px 10px white;
+}
+
+#game-active article h3 {
+    font-family: "Shrikhand", serif;
+    font-size: 80px;
+    margin-bottom: 40px;
+    color: white
+}
+
+#click {
+    font-size: 36px;
+}
+
+#textGame {
+    font-size: 48px;
+    margin-bottom: 4rem;
+    margin-top: 5rem;
+}
+
+#active-player-name {
+    text-transform: uppercase;
+}
+
+#win-display {
+    color: wheat;
+    text-transform: uppercase;
+}
+
+span {
+    font-family: "Shrikhand", serif;
+    font-weight: bolder;
+    color:rgb(12, 4, 52);
+}
+
+#new-game {
+    background-color: rgb(215, 187, 247);
+    border: 5px solid rgb(12, 4, 52);
+    color: rgb(12, 4, 52);
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-size: 36px;
+    margin: 0.5rem;
+}
+
+#game-board {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(9, 6rem);
+    grid-template-rows: repeat(9, 6rem);
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 100px;
+    margin-top: 50px;
+}
+
+#game-board li {
+    font-family: "Pacifico", cursive;
+    background-color: rgb(215, 187, 247);
+    border: 1px solid rgb(12, 4, 52);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 48px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+#game-board li:hover {
+    background-color: rgb(140,0, 255);
+}
+
+#game-board li.disabled {
+    background-color: rgb(140,0, 255);
+    cursor: default;
+}
+
+#game-board li.finish {
+    background-color: darkgreen;/*rgb(7, 63, 7);*/
+    cursor: default;
+}
