@@ -27,7 +27,7 @@ Welcome to Tic Tac Toe, the classic game of strategy and skill! Perfect for play
 1. HTML
 2. CSS
 3. JavaScript
-4. NodeJS
+4. Node.js
 
 
 
