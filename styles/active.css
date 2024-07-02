@@ -65,7 +65,7 @@ span {
     grid-template-columns: repeat(9, 6rem);
     grid-template-rows: repeat(9, 6rem);
     justify-content: center;
-    gap: 0.5rem;
+    gap: 0;
     margin-bottom: 100px;
     margin-top: 50px;
 }
@@ -73,7 +73,7 @@ span {
 #game-board li {
     font-family: "Pacifico", cursive;
     background-color: rgb(215, 187, 247);
-    border: 1px solid rgb(12, 4, 52);
+    border: 0.09rem solid rgb(12, 4, 52);
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -81,7 +81,6 @@ span {
     color: white;
     font-size: 48px;
     font-weight: bold;
-    border-radius: 5px;
 }
 
 #game-board li:hover {

@@ -61,7 +61,8 @@ main li {
   margin-bottom: 100px;
 }
 
-#rules {
+.rules {
+  margin-top: -80px;
   margin-bottom: 100px;
   display: none;
 }

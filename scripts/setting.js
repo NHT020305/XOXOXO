@@ -12,10 +12,10 @@ function changeSettingBarState() {
 
 function settingBarAppear() {
     if (appear == true) {
-        settingBar.style.animation = 'hide 0.2s ease-in-out forwards';
+        settingBar.style.animation = 'hide 0.3s ease-in-out forwards';
     } else {
         settingBar.style.display = 'block';
-        settingBar.style.animation = 'move 0.2s ease-in-out forwards';
+        settingBar.style.animation = 'move 0.3s ease-in-out forwards';
     }
     changeSettingBarState();
 }

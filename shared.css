@@ -66,9 +66,6 @@ body {
 }
 
 #nav a:hover {
-  color: white;
-  background-color: rgb(12, 4, 52);
-  border-radius: 10px;
   text-decoration: underline;
 }
 
@@ -230,7 +227,7 @@ header {
   border-left: 7px solid rgb(215, 187, 247);
   background-color: rebeccapurple;
   z-index: 2;
-  animation: move 0.2s ease-in-out forwards;
+  animation: move 0.3s ease-in-out forwards;
   overflow: auto;
   display: none;
 }
