@@ -6,7 +6,7 @@ Welcome to Tic Tac Toe, the classic game of strategy and skill! Perfect for play
 
 
 ## Our Mission
-At Tic-Tac-Toe Online, our mission is to bring people together through the simplicity and joy of Tic-Tac-Toe. We believe in the power of games to connect, entertain, and challenge minds, and we strive to create a space where players of all ages can enjoy this timeless game.
+At Tic Tac Toe Online, our mission is to bring people together through the simplicity and joy of Tic Tac Toe. We believe in the power of games to connect, entertain, and challenge minds, and we strive to create a space where players of all ages can enjoy this timeless game.
  
 
 ## How to play
