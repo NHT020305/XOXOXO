@@ -1,10 +1,12 @@
 # XOXOXO
 
 
-
 ## Introduction
-Welcome to Tic Tac Toe, the classic game of strategy and skill! Perfect for players of all ages, this timeless game pits two opponents against each other in a race to align three of their symbols—either X or O—in a row, column, or diagonal. Whether you're playing on a traditional grid with a friend or challenging an AI opponent, Tic Tac Toe is a fun and engaging way to test your wits and outsmart your rival. Get ready to think ahead, anticipate your opponent's moves, and enjoy the thrill of victory in this simple yet endlessly entertaining game!
+Welcome to Tic Tac Toe, the classic game of strategy and skill! Perfect for players of all ages, this timeless game pits two opponents against each other in a race to align three of their symbols—either X or O—in a row, column, or diagonal. Whether playing on a traditional grid with a friend or challenging an AI opponent, Tic Tac Toe is a fun and engaging way to test your wits and outsmart your rival. Get ready to think ahead, anticipate your opponent's moves, and enjoy the thrill of victory in this simple yet endlessly entertaining game!
 
+
+## Our Mission
+At Tic-Tac-Toe Online, our mission is to bring people together through the simplicity and joy of Tic-Tac-Toe. We believe in the power of games to connect, entertain, and challenge minds, and we strive to create a space where players of all ages can enjoy this timeless game.
  
 
 ## How to play
@@ -22,10 +24,8 @@ Welcome to Tic Tac Toe, the classic game of strategy and skill! Perfect for play
 **Player Strategy**: Players must strategize to block their opponent's attempts to create a winning line while simultaneously planning their winning moves.
 
 
-
 ## Tech Stack
 **HTML** | **CSS** | **JavaScript** | **Node.js** | **Python**
-
 
 
 ### Website link
