@@ -2,9 +2,9 @@
   "name": "xoxoxo",
   "version": "1.0.0",
   "description": "Getting started with Node and Express",
-  "main": "fun.js",
+  "main": "main.js",
   "scripts": {
-    "start": "nodemon fun.js"
+    "start": "nodemon main.js"
   },
   "author": "Huy Tung",
   "license": "ISC",
