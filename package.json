@@ -4,11 +4,14 @@
   "description": "Getting started with Node and Express",
   "main": "fun.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon fun.js"
   },
   "author": "Huy Tung",
   "license": "ISC",
   "dependencies": {
     "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
   }
 }
