@@ -7,40 +7,57 @@ aside {
   font-family: "Pacifico", cursive;
   text-align: center;
   position: relative;
-  left: 400px;
+  left: 320px;
   top: 200px;
-  width: 400px;
-  border: 5px solid white;
+  width: 600px;
+  border: 5px solid rgb(12, 4, 52);
   border-radius: 30px;
   padding: 0 150px 30px 150px;
-  background-color: white;
+  background-color: rgb(12, 4, 52);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   display: block;
   margin-bottom: 100px;
 }
 
 aside h2 {
+  color: rgb(215, 187, 247);
   font-family: "Shrikhand", serif;
-  font-size: 36px;
+  font-size: 42px;
+  margin-bottom: 5rem;
+}
+
+.get-information {
+  margin-bottom: 3rem;
 }
 
 aside label {
+  color: rgb(215, 187, 247);
   display: block;
   margin-bottom: 20px;
   margin-top: -10px;
+  margin-left: -7rem;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 28px;
+  text-align: left;
 }
 
 aside input {
-  width: 400px;
+  width: 51rem;
   height: 50px;
-  border: 2px solid rgb(140, 0, 255);
+  border: 2px solid white;
   border-radius: 5px;
-  font-size: 28px;
+  font-size: 24px;
   font-family: "Shrikhand", serif;
   margin-bottom: 10px;
   color: rebeccapurple;
+  margin-left: -7rem;
+}
+
+.get-information #describe {
+  white-space: pre-wrap; /* Allows text wrapping */
+  word-wrap: break-word; /* Breaks long words */
+  overflow-wrap: break-word; /* Breaks long words */
+  height: auto; /* Adjusts height automatically */
 }
 
 aside #valid {
@@ -57,15 +74,15 @@ aside #button {
 aside button {
   display: inline;
   padding: 5px 20px;
-  margin-left: 0px;
   border-radius: 5px;
   font-family: "Shrikhand", serif;
-  font-size: 24px;
+  font-size: 28px;
   background-color: rgb(140, 0, 255);
   color: white;
   border: 5px solid rgb(140, 0, 255);
   border-radius: 10px;
   cursor: pointer;
+  margin-top: 1rem;
 }
 
 aside button:hover {

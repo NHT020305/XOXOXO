@@ -1,0 +1,31 @@
+#success {
+  margin-top: 10rem;
+}
+
+#success h1 {
+  font-size: 72px;
+  margin-bottom: -1rem;
+}
+
+#success p {
+  font-size: 32px;
+  margin-bottom: 3rem;
+}
+
+#success a {
+  padding: 5px 20px;
+  border-radius: 5px;
+  font-family: "Shrikhand", serif;
+  font-size: 28px;
+  background-color: rgb(140, 0, 255);
+  color: white;
+  border: 5px solid rgb(140, 0, 255);
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+#success a:hover {
+  background-color: rebeccapurple;
+  border: 5px solid rebeccapurple;
+}

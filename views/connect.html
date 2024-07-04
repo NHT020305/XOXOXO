@@ -13,11 +13,11 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
-    <link rel="icon" href="images/favicon.ico" type="images/x-icon" />
+    <link rel="icon" href="/images/favicon.ico" type="images/x-icon" />
     <link rel="stylesheet" href="/styles/shared.css" />
-    <link rel="stylesheet" href="/settings/settings.css" />
+    <link rel="stylesheet" href="/connect/connect.css" />
     <script src="/scripts/setting.js" defer></script>
-    <title>XOXOXO | Settings</title>
+    <title>XOXOXO | Connect</title>
   </head>
   <body>
     <section id="bar">
@@ -49,30 +49,37 @@
     </div>
     <main>
       <aside>
-        <h2>Choose your name</h2>
-        <form id="choose-name">
-          <div>
-            <label for="player-name">Player name (1 - 8 characters)</label>
-            <input type="text" id="player-name" name="player-name" required />
+        <h2>Share your XOXOXO diary</h2>
+        <form method='POST' id="share-diary">
+          <div class="get-information">
+            <label for="main-nickname">Your nickname</label>
+            <input
+              type="text"
+              id="main-nickname"
+              name="main-nickname"
+              required
+            />
           </div>
-          <p id="valid">Please enter a valid name!</p>
+          <div class="get-information">
+            <label for="opponent-nickname">Your friend's nickname</label>
+            <input
+              type="text"
+              id="opponent-nickname"
+              name="opponent-nickname"
+              required
+            />
+          </div>
+          <div class="get-information">
+            <label for="match-name">Name for the match</label>
+            <input type="text" id="match-name" name="match-name" required />
+          </div>
+          <div class="get-information">
+            <label for="decribe">Describe your match</label>
+            <input type="text" id="decribe" name="decribe" required />
+          </div>
+          <!--<p id="valid">Please enter a valid name!</p>-->
           <div id="button">
-            <button type="reset" id="cancel">Cancel</button>
-            <button type="submit" id="confirm">Confirm</button>
-          </div>
-        </form>
-      </aside>
-      <aside id="abc">
-        <h2>Choose your name</h2>
-        <form id="choose-name">
-          <div>
-            <label for="player-name">Player name (1 - 8 characters)</label>
-            <input type="text" id="player-name" name="player-name" required />
-          </div>
-          <p id="valid">Please enter a valid name!</p>
-          <div id="button">
-            <button type="reset" id="cancel">Cancel</button>
-            <button type="submit" id="confirm">Confirm</button>
+            <button type="submit" id="confirm">Share your diary</button>
           </div>
         </form>
       </aside>
