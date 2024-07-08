@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('includes/head.ejs') %>
+    <link rel="stylesheet" href="/styles/shared.css" />
+    <link rel="stylesheet" href="/connect/connect.css" />
+    <script src="/scripts/setting.js" defer></script>
+    <title>XOXOXO | Connect</title>
+  </head>
+  <body>
+    <%- include('includes/navigation.ejs') %>
+    <%- include('includes/menu.ejs') %>
+    <main>
+      <article>
+        <h2>Share your XOXOXO diary</h2>
+        <form method='POST' id="share-diary">
+          <div class="get-information">
+            <label for="mainNickname">Your nickname</label>
+            <input
+              type="text"
+              id="mainNickname"
+              name="mainNickname"
+              required
+            />
+          </div>
+          <div class="get-information">
+            <label for="opponentNickname">Your friend's nickname</label>
+            <input
+              type="text"
+              id="opponentNickname"
+              name="opponentNickname"
+              required
+            />
+          </div>
+          <div class="get-information">
+            <label for="matchName">Name for the match</label>
+            <input type="text" id="matchName" name="matchName" required />
+          </div>
+          <div class="get-information">
+            <label for="winner">Who is the winner?</label>
+            <input type="text" id="winner" name="winner" required />
+          </div>
+          <div class="get-information">
+            <label for="describe">Share some thoughts about your match</label>
+            <input type="text" id="describe" name="describe" required />
+          </div>
+          <div id="button">
+            <button type="submit" id="confirm">Share your diary</button>
+          </div>
+        </form>
+      </article>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('includes/head.ejs') %>
+    <link rel="stylesheet" href="/styles/shared.css" />
+    <link rel="stylesheet" href="/explore/explore.css" />
+    <script src="/scripts/setting.js" defer></script>
+    <title>XOXOXO | Explore</title>
+  </head>
+  <body>
+    <%- include('includes/navigation.ejs') %> <%- include('includes/menu.ejs')
+    %>
+    <main>
+      <h1>Welcome!</h1>
+      <% if (numberOfMatches === 0) { %>
+      <p class="explore-intro" id="no-game">
+        Unfortunately, you have no matches to share, play some games or add
+        existing matches to your diary
+      </p>
+      <% } else { %>
+      <p class="explore-intro">
+        We have found
+        <span id="numberOfMatches"><%= numberOfMatches %></span> matches in your
+        XOXOXO diary
+      </p>
+      <ul id="diaries-list">
+        <% for (const diary of diaries) { %> <%-
+        include('includes/diary/diary-item.ejs', { diary : diary }) %> <% } %>
+      </ul>
+      <% } %>
+      <a id="add-diary" href="/connect">Add to your XOXOXO diary</a>
+    </main>
+  </body>
+</html>

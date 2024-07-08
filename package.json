@@ -9,7 +9,9 @@
   "author": "Huy Tung",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.19.2"
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "uuid": "^10.0.0"
   },
   "devDependencies": {
     "nodemon": "^3.1.4"

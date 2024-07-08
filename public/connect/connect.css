@@ -3,7 +3,7 @@ body {
   margin-bottom: 300px;
 }
 
-aside {
+article {
   font-family: "Pacifico", cursive;
   text-align: center;
   position: relative;
@@ -19,7 +19,7 @@ aside {
   margin-bottom: 100px;
 }
 
-aside h2 {
+article h2 {
   color: rgb(215, 187, 247);
   font-family: "Shrikhand", serif;
   font-size: 42px;
@@ -30,7 +30,7 @@ aside h2 {
   margin-bottom: 3rem;
 }
 
-aside label {
+article label {
   color: rgb(215, 187, 247);
   display: block;
   margin-bottom: 20px;
@@ -41,8 +41,8 @@ aside label {
   text-align: left;
 }
 
-aside input {
-  width: 51rem;
+article input {
+  width: 51.3rem;
   height: 50px;
   border: 2px solid white;
   border-radius: 5px;
@@ -53,25 +53,11 @@ aside input {
   margin-left: -7rem;
 }
 
-.get-information #describe {
-  white-space: pre-wrap; /* Allows text wrapping */
-  word-wrap: break-word; /* Breaks long words */
-  overflow-wrap: break-word; /* Breaks long words */
-  height: auto; /* Adjusts height automatically */
-}
-
-aside #valid {
-  color: brown;
-  display: none;
-  font-size: 28px;
-  margin-top: 0;
-}
-
-aside #button {
+article #button {
   margin-left: 10px;
 }
 
-aside button {
+article button {
   display: inline;
   padding: 5px 20px;
   border-radius: 5px;
@@ -85,7 +71,7 @@ aside button {
   margin-top: 1rem;
 }
 
-aside button:hover {
+article button:hover {
   background-color: rebeccapurple;
   border: 5px solid rebeccapurple;
 }

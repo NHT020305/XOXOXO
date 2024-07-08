@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('includes/head.ejs') %>
+    <link rel="stylesheet" href="/styles/shared.css" />
+    <script src="/scripts/setting.js" defer></script>
+    <title>XOXOXO</title>
+  </head>
+  <body>
+    <%- include('includes/navigation.ejs') %>
+    <%- include('includes/header.ejs') %>
+    <%- include('includes/menu.ejs') %>
+    <main id="main">
+      <img src="/images/Untitled design.png" id="image-home">
+      <ul id="start-button">
+        <li><a href="/game" class="start">PLAY</a></li>
+        <li><a href="/" class="start" id="sign-up">MODE</a></li>
+        <li><a href="/" class="start" id="sign-in">SIGN IN</a></li>
+      </ul>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('includes/head.ejs') %>
+    <link rel="stylesheet" href="/styles/shared.css">
+    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="/styles/configuration.css" />
+    <link rel="stylesheet" href="/styles/active.css" />
+    <link rel="stylesheet" href="/styles/choose.css" />
+    <script src="/scripts/configuration.js" defer></script>
+    <script src="/scripts/active.js" defer></script>
+    <script src="/scripts/app.js" defer></script>
+    <title>XOXOXO | Game</title>
+  </head>
+  <body id="body-game">
+    <div id="backdrop"></div>
+    <main>
+      <aside>
+        <h2>Choose your name</h2>
+        <form id="choose-name">
+          <div>
+            <label for="player-name"
+              >Player name (1 - 8 characters)</label
+            >
+            <input type="text" id="player-name" name="player-name" required />
+          </div>
+          <p id="valid">Please enter a valid name!</p>
+          <div id="button">
+            <button type="reset" id="cancel">Cancel</button>
+            <button type="submit" id="confirm">Confirm</button>
+          </div>
+        </form>
+      </aside>
+      <section id="game-configuration">
+        <ol>
+          <li>
+            <article id="player-1">
+              <h3>PLAYER 1</h3>
+              <p>X</p>
+              <button class="edit" id="edit1" data-playerid="1">Edit name</button>
+            </article>
+          </li>
+          <li>
+            <article id="player-2">
+              <h3>PLAYER 2</h3>
+              <p>O</p>
+              <button class="edit" id="edit2" data-playerid="2">Edit name</button>
+            </article>
+          </li>
+        </ol>
+        <button id="play">New Game</button>
+        <a href="/" id="start">Quit Game</a>
+      </section>
+
+      <section id="game-active">
+        <article>
+          <h3><span id="win-display">PLAYER NAME</span> won!</h3>
+          <p id="click">
+            Click <span id="new-game">New Game</span> above, to start a
+            new game!
+          </p>
+        </article>
+        <p id="textGame">
+          It's your turn <span id="active-player-name">Play Name</span>!
+        </p>
+        <ol id="game-board">
+          <li data-col="1" data-row="1"></li>
+          <li data-col="2" data-row="1"></li>
+          <li data-col="3" data-row="1"></li>
+          <li data-col="4" data-row="1"></li>
+          <li data-col="5" data-row="1"></li>
+          <li data-col="6" data-row="1"></li>
+          <li data-col="7" data-row="1"></li>
+          <li data-col="8" data-row="1"></li>
+          <li data-col="9" data-row="1"></li>
+
+          <li data-col="1" data-row="2"></li>
+          <li data-col="2" data-row="2"></li>
+          <li data-col="3" data-row="2"></li>
+          <li data-col="4" data-row="2"></li>
+          <li data-col="5" data-row="2"></li>
+          <li data-col="6" data-row="2"></li>
+          <li data-col="7" data-row="2"></li>
+          <li data-col="8" data-row="2"></li>
+          <li data-col="9" data-row="2"></li>
+
+          <li data-col="1" data-row="3"></li>
+          <li data-col="2" data-row="3"></li>
+          <li data-col="3" data-row="3"></li>
+          <li data-col="4" data-row="3"></li>
+          <li data-col="5" data-row="3"></li>
+          <li data-col="6" data-row="3"></li>
+          <li data-col="7" data-row="3"></li>
+          <li data-col="8" data-row="3"></li>
+          <li data-col="9" data-row="3"></li>
+
+          <li data-col="1" data-row="4"></li>
+          <li data-col="2" data-row="4"></li>
+          <li data-col="3" data-row="4"></li>
+          <li data-col="4" data-row="4"></li>
+          <li data-col="5" data-row="4"></li>
+          <li data-col="6" data-row="4"></li>
+          <li data-col="7" data-row="4"></li>
+          <li data-col="8" data-row="4"></li>
+          <li data-col="9" data-row="4"></li>
+
+          <li data-col="1" data-row="5"></li>
+          <li data-col="2" data-row="5"></li>
+          <li data-col="3" data-row="5"></li>
+          <li data-col="4" data-row="5"></li>
+          <li data-col="5" data-row="5"></li>
+          <li data-col="6" data-row="5"></li>
+          <li data-col="7" data-row="5"></li>
+          <li data-col="8" data-row="5"></li>
+          <li data-col="9" data-row="5"></li>
+
+          <li data-col="1" data-row="6"></li>
+          <li data-col="2" data-row="6"></li>
+          <li data-col="3" data-row="6"></li>
+          <li data-col="4" data-row="6"></li>
+          <li data-col="5" data-row="6"></li>
+          <li data-col="6" data-row="6"></li>
+          <li data-col="7" data-row="6"></li>
+          <li data-col="8" data-row="6"></li>
+          <li data-col="9" data-row="6"></li>
+
+          <li data-col="1" data-row="7"></li>
+          <li data-col="2" data-row="7"></li>
+          <li data-col="3" data-row="7"></li>
+          <li data-col="4" data-row="7"></li>
+          <li data-col="5" data-row="7"></li>
+          <li data-col="6" data-row="7"></li>
+          <li data-col="7" data-row="7"></li>
+          <li data-col="8" data-row="7"></li>
+          <li data-col="9" data-row="7"></li>
+
+          <li data-col="1" data-row="8"></li>
+          <li data-col="2" data-row="8"></li>
+          <li data-col="3" data-row="8"></li>
+          <li data-col="4" data-row="8"></li>
+          <li data-col="5" data-row="8"></li>
+          <li data-col="6" data-row="8"></li>
+          <li data-col="7" data-row="8"></li>
+          <li data-col="8" data-row="8"></li>
+          <li data-col="9" data-row="8"></li>
+
+          <li data-col="1" data-row="9"></li>
+          <li data-col="2" data-row="9"></li>
+          <li data-col="3" data-row="9"></li>
+          <li data-col="4" data-row="9"></li>
+          <li data-col="5" data-row="9"></li>
+          <li data-col="6" data-row="9"></li>
+          <li data-col="7" data-row="9"></li>
+          <li data-col="8" data-row="9"></li>
+          <li data-col="9" data-row="9"></li>
+        </ol>
+      </section>
+    </main>
+  </body>
+</html>

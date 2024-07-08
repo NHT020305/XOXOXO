@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('includes/head.ejs') %>
+    <link rel="stylesheet" href="/styles/shared.css" />
+    <link rel="stylesheet" href="/invited-player/invited-player.css" />
+    <script src="/scripts/setting.js" defer></script>
+    <title>XOXOXO | Invited Player</title>
+  </head>
+  <body>
+    <%- include('includes/navigation.ejs') %> 
+    <%- include('includes/menu.ejs')%>
+    <main>
+      <h1><%= diary.opponentNickname %></h1>
+    </main>
+  </body>
+</html>

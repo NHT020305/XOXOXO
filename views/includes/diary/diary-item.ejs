@@ -1,0 +1,12 @@
+<li class="diary-item">
+  <article>
+    <h2 class="match-name-display"><%= diary.matchName %></h2>
+    <div class="players-name-display">
+      <p>Main player: <span><%= diary.mainNickname %></span></p>
+      <p>Invited player: <span><%= diary.opponentNickname %></span></p>
+    </div>
+    <p class="winner-display"><span><%= diary.winner %></span> won the game</p>
+    <p class="description"><%= diary.describe %></p>
+    <a class="view-main-player-profile" href="/explore/<%= diary.pid %>">View invited player's profile</a>
+  </article>
+</li>
