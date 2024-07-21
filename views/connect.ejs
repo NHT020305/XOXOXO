@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="/styles/shared.css" />
     <link rel="stylesheet" href="/connect/connect.css" />
     <script src="/scripts/setting.js" defer></script>
-    <title>XOXOXO | Connect</title>
+    <title>XOXOXO | New diary</title>
   </head>
   <body>
     <%- include('includes/navigation.ejs') %>
@@ -13,7 +13,7 @@
     <main>
       <article>
         <h2>Share your XOXOXO diary</h2>
-        <form method='POST' id="share-diary">
+        <form action="/explore" method='POST' id="share-diary">
           <div class="get-information">
             <label for="mainNickname">Your nickname</label>
             <input
@@ -35,6 +35,11 @@
           <div class="get-information">
             <label for="matchName">Name for the match</label>
             <input type="text" id="matchName" name="matchName" required />
+            <!--<select id="matchName" name="matchName">
+              <% for (const matchName of matchNames) { %>
+                <option value=""><%= matchName.name %></option>
+              <% } %>
+            </select>-->
           </div>
           <div class="get-information">
             <label for="winner">Who is the winner?</label>
@@ -42,7 +47,7 @@
           </div>
           <div class="get-information">
             <label for="describe">Share some thoughts about your match</label>
-            <input type="text" id="describe" name="describe" required />
+            <textarea id="describe" name="describe" required rows="10"></textarea>
           </div>
           <div id="button">
             <button type="submit" id="confirm">Share your diary</button>

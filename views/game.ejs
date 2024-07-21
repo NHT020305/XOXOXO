@@ -17,12 +17,12 @@
     <main>
       <aside>
         <h2>Choose your name</h2>
-        <form id="choose-name">
+        <form id="choose-name" method="POST" action="/confirm">
           <div>
-            <label for="player-name"
+            <label for="playerName"
               >Player name (1 - 8 characters)</label
             >
-            <input type="text" id="player-name" name="player-name" required />
+            <input type="text" id="player-name" name="playerName" required />
           </div>
           <p id="valid">Please enter a valid name!</p>
           <div id="button">

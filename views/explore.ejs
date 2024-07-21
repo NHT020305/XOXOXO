@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="/styles/shared.css" />
     <link rel="stylesheet" href="/explore/explore.css" />
     <script src="/scripts/setting.js" defer></script>
-    <title>XOXOXO | Explore</title>
+    <title>XOXOXO | My blog</title>
   </head>
   <body>
     <%- include('includes/navigation.ejs') %> <%- include('includes/menu.ejs')
@@ -20,15 +20,19 @@
       <% } else { %>
       <p class="explore-intro">
         We have found
-        <span id="numberOfMatches"><%= numberOfMatches %></span> matches in your
-        XOXOXO diary
+        <span id="numberOfMatches"><%= numberOfMatches %></span> diaries in your
+        XOXOXO blog
       </p>
+      <form action="/explore" method="GET">
+        <input type="hidden" value="<%= nextOrder %>" name="order"> 
+        <button class="btn">Change order</button>
+      </form>
       <ul id="diaries-list">
         <% for (const diary of diaries) { %> <%-
         include('includes/diary/diary-item.ejs', { diary : diary }) %> <% } %>
       </ul>
       <% } %>
-      <a id="add-diary" href="/connect">Add to your XOXOXO diary</a>
+      <a class="add-diary" href="/connect">Add more XOXOXO diaries</a>
     </main>
   </body>
 </html>

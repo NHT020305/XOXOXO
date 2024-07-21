@@ -1,3 +1,8 @@
+/*const express = require("express");
+
+const db = require('../../data/database');
+
+const uuid = require("uuid");*/
 
 //RESET AND START THE GAME WHEN CLICKING NEW GAME BUTTON
 
@@ -388,6 +393,30 @@ function highlight() {
 
 //HOW THE GAME WORKS
 
+
+async function sendData() {
+  try {
+      // Make a POST request to the backend server
+      const response = await fetch('http://localhost:3000/api/saveData', {
+          method: 'POST', // Use the POST method to send data
+          headers: {
+              'Content-Type': 'application/json' // Indicate that the request body will be in JSON format
+          },
+          body: JSON.stringify({ mainNickname: players[0].name, opponentNickname: players[1].name, winner: players[wonPlayer] }) // Convert the data to a JSON string and include it in the request body
+      });
+
+      // Wait for the server's response and parse it as JSON
+      const result = await response.json();
+      
+      // Log the server's response to the console
+      console.log('Server Response:', result);
+  } catch (error) {
+      // If there is an error, log it to the console
+      console.error('Error:', error);
+  }
+}
+
+
 function play(event) {
 
   const colSelected = event.target.dataset.col - 1;
@@ -422,6 +451,26 @@ function play(event) {
       } else {
         switchPlayer();
       }
+
+      /*const response = await fetch('http://localhost:3000/set-nickname', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ playerId, nickname })
+      });
+
+      const newDiary = {
+        mainNickname: players[0].name,
+        opponentNickname: players[1].name,
+        matchName: 'ABCDEF',
+        winner: players[wonPlayer].name,
+        describe: 'It was funny',
+        pid: uuid.v4()
+      };
+      
+      const storedDiaries = await db.getDb().collection('diaries').insertOne(newDiary);
+      console.log(storedDiaries);*/
     }
   }
 }

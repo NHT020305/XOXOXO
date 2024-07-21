@@ -28,7 +28,7 @@ function saveConfiguration(event) {
 
   event.preventDefault();
   const formData = new FormData(event.target);
-  const enteredPlayerName = formData.get("player-name").trim();
+  const enteredPlayerName = formData.get("playerName").trim();
 
   if (!isValid(enteredPlayerName)) {
     validText.style.display = "block";

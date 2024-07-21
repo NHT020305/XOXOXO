@@ -43,7 +43,6 @@ article label {
 
 article input {
   width: 51.3rem;
-  height: 50px;
   border: 2px solid white;
   border-radius: 5px;
   font-size: 24px;
@@ -51,6 +50,31 @@ article input {
   margin-bottom: 10px;
   color: rebeccapurple;
   margin-left: -7rem;
+  padding: 0.5rem;
+}
+
+article textarea {
+  width: 51.3rem;
+  border: 2px solid white;
+  border-radius: 5px;
+  font-size: 24px;
+  font-family: "Shrikhand", serif;
+  margin-bottom: 10px;
+  color: rebeccapurple;
+  margin-left: -7rem;
+  padding: 0.5rem;
+}
+
+article select {
+  color: rebeccapurple;
+  width: 51.3rem;
+  border: 2px solid white;
+  border-radius: 5px;
+  font-size: 24px;
+  font-family: "Shrikhand", serif;
+  margin-bottom: 10px;
+  margin-left: -7rem;
+  padding: 0.5rem;
 }
 
 article #button {
