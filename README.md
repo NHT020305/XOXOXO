@@ -25,7 +25,7 @@ At Tic Tac Toe Online, our mission is to bring people together through the simpl
 
 
 ## Tech Stack
-**HTML** | **CSS** | **JavaScript** | **Node.js** | **Express** | **MongoDB**
+**EJS** | **CSS** | **JavaScript** | **Node.js** | **Express** | **MongoDB**
 
 
 ### Website link
