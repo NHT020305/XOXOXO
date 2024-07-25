@@ -1,6 +1,6 @@
 .diary-item {
-  margin-top: 10rem;
-  margin-left: 1rem;
+  width: 70rem;
+  margin-left: 2rem;
 }
 
 body {
@@ -8,17 +8,49 @@ body {
 }
 
 .add-diary {
-  font-size: 54px;
-  position: relative;
-  margin-left: 2rem;
+  font-size: 36px;
 }
 
-.comment {
-  margin-top: 3rem;
+.comment,
+.result {
+  margin-top: 2rem;
   margin-bottom: 0;
   font-size: 36px;
   font-family: "Shrikhand", serif;
   color: rgb(215, 187, 247);
   text-align: left;
-  margin-left: 4rem;
+  margin-left: 3rem;
+  width: 65rem;
+}
+
+.result {
+  margin-top: 3rem;
+  margin-bottom: -1rem;
+}
+
+.match-image {
+  margin-top: 2rem;
+  border-radius: 1rem;
+  width: 64rem;
+}
+
+.button-each-diary {
+  display: grid;
+  grid-template-columns: repeat(2, 25rem);
+  justify-content: center;
+  gap: 5rem;
+  margin-top: 10rem;
+}
+
+.diary-item .players-name-display {
+  grid-template-columns: repeat(2, 29rem);
+}
+
+.diary-item .description,
+.diary-item .winner-display {
+  width: 62rem;
+}
+
+#comment-list {
+  list-style: none;
 }

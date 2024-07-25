@@ -16,6 +16,7 @@ app.set("view engine", "ejs");
 
 
 app.use(express.static("public"));
+app.use('/imageStorage', express.static("imageStorage"));
 app.use(express.urlencoded({ extended: false }));
 
 

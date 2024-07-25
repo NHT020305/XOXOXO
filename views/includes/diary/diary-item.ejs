@@ -6,13 +6,14 @@
       <p>Invited player: <span><%= diary.opponentNickname %></span></p>
     </div>
     <p class="winner-display"><span><%= diary.winner %></span> won the game</p>
-    <!--<p class="description"><%= diary.describe %></p>-->
-    <p class="date">Posted at <span class="date-display"><%= diary.date %></span></p>
-    <div class="players-name-display">
+    <p class="description"><%= diary.describe %></p>-->
+    <p class="date">Last updated at <span class="date-display"><%= diary.date %></span></p>
+    <div class="button-display">
       <a class="view-main-player-profile" href="/explore/<%= diary._id %>">View more details</a>
+      <a class="edit" href="/explore/<%= diary._id %>/edit">Edit diary</a>
       <form action="/explore/<%= diary._id %>/delete" method="POST">
         <button class="delete">Delete diary</button>
-      </form>  
+      </form>
     </div>
   </article>
 </li>

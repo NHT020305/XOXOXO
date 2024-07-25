@@ -14,17 +14,17 @@
       <h1>Welcome!</h1>
       <% if (numberOfMatches === 0) { %>
       <p class="explore-intro" id="no-game">
-        Unfortunately, you have no matches to share, play some games or add
-        existing matches to your diary
+        Unfortunately, you have no XOXOXO diaries to share, play some games or add
+        existing XOXOXO diaries to your Blog
       </p>
       <% } else { %>
       <p class="explore-intro">
         We have found
-        <span id="numberOfMatches"><%= numberOfMatches %></span> diaries in your
-        XOXOXO blog
+        <span id="numberOfMatches"><%= numberOfMatches %></span> diar<%=
+        numberOfMatches > 1 ? 'ies' : 'y' %> in your XOXOXO blog
       </p>
       <form action="/explore" method="GET">
-        <input type="hidden" value="<%= nextOrder %>" name="order"> 
+        <input type="hidden" value="<%= nextOrder %>" name="order" />
         <button class="btn">Change order</button>
       </form>
       <ul id="diaries-list">
@@ -32,7 +32,7 @@
         include('includes/diary/diary-item.ejs', { diary : diary }) %> <% } %>
       </ul>
       <% } %>
-      <a class="add-diary" href="/connect">Add more XOXOXO diaries</a>
+      <a class="add-diary" href="/connect">Add XOXOXO diaries</a>
     </main>
   </body>
 </html>

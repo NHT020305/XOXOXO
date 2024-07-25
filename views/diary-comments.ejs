@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('includes/head.ejs') %>
+    <link rel="stylesheet" href="/styles/shared.css" />
+    <link rel="stylesheet" href="/connect/connect.css" />
+    <script src="/scripts/setting.js" defer></script>
+    <title>XOXOXO | New diary</title>
+  </head>
+  <body>
+    <%- include('includes/navigation.ejs') %> <%- include('includes/menu.ejs')
+    %>
+    <main>
+      <article>
+        <h2 class="update-diary-matchName"><%= diary.matchName %></h2>
+        <form
+          action="/explore/<%= diary._id %>/comment"
+          method="POST"
+          id="share-diary"
+        >
+          <div class="get-information">
+            <label for="commentTitle">Title of your comment: </label>
+            <input
+              type="text"
+              id="commentTitle"
+              name="commentTitle"
+              required
+            />
+          </div>
+          <div class="get-information">
+            <label for="commentContent">Your comment: <span></span></label>
+            <textarea id="commentContent" name="commentContent" required rows="10"></textarea>
+          </div>
+          <div id="button-update">
+            <button type="submit" id="confirm">Comment</button>
+            <a href="/explore/<%= diary._id %>" id="cancel">Cancel</a>
+          </div>
+        </form>
+      </article>
+    </main>
+  </body>
+</html>

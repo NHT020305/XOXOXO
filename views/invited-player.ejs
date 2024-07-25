@@ -6,23 +6,36 @@
     <link rel="stylesheet" href="/explore/explore.css" />
     <link rel="stylesheet" href="/invited-player/invited-player.css" />
     <script src="/scripts/setting.js" defer></script>
-    <title>XOXOXO | <%= diary.matchName %></title>
+    <title>XOXOXO | My blog | <%= diary.matchName %></title>
   </head>
   <body>
-    <%- include('includes/navigation.ejs') %> 
+    <%- include('includes/navigation.ejs') %>
     <%- include('includes/menu.ejs')%>
     <main>
+      <div class="button-each-diary">
+        <a class="add-diary" href="/explore">Back to Blog</a>
+        <a class="add-diary" id="comment-on-diary" href="/explore/<%= diary._id %>/comment">Comment on diary</a>
+      </div>
       <article class="diary-item">
         <h2 class="match-name-display"><%= diary.matchName %></h2>
+        <p class="date">Last updated at <span class="date-display"><%= diary.date %></span></p>
         <div class="players-name-display">
           <p>Main player: <span><%= diary.mainNickname %></span></p>
           <p>Invited player: <span><%= diary.opponentNickname %></span></p>
         </div>
+        <h2 class="result">Match result:</h2>
         <p class="winner-display"><span><%= diary.winner %></span> won the game</p>
-        <h2 class="comment">Main player's comment</h2>
+        <h2 class="comment">Main player's comment:</h2>
         <p class="description"><%= diary.describe %></p>
+        <img class="match-image" src='/<%= diary.imagePath %>' alt="Match photo">
       </article>
-      <a class="add-diary" href="/explore">Back</a>
+      <section class="comment-users">
+        <h2>Comments</h2>
+        <ul id="comment-list">
+          <% for (const comment of comments) { %> <%-
+            include('includes/comment/comment-item.ejs', { comment : comment }) %> <% } %>
+        </ul>
+      </section>
     </main>
   </body>
 </html>

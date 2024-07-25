@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="/styles/shared.css" />
     <link rel="stylesheet" href="/connect/connect.css" />
     <script src="/scripts/setting.js" defer></script>
+    <script src="/scripts/file-preview.js" defer></script>
     <title>XOXOXO | New diary</title>
   </head>
   <body>
@@ -13,27 +14,9 @@
     <main>
       <article>
         <h2>Share your XOXOXO diary</h2>
-        <form action="/explore" method='POST' id="share-diary">
+        <form action="/explore" method='POST' enctype="multipart/form-data" id="share-diary">
           <div class="get-information">
-            <label for="mainNickname">Your nickname</label>
-            <input
-              type="text"
-              id="mainNickname"
-              name="mainNickname"
-              required
-            />
-          </div>
-          <div class="get-information">
-            <label for="opponentNickname">Your friend's nickname</label>
-            <input
-              type="text"
-              id="opponentNickname"
-              name="opponentNickname"
-              required
-            />
-          </div>
-          <div class="get-information">
-            <label for="matchName">Name for the match</label>
+            <label for="matchName">Name of the match:</label>
             <input type="text" id="matchName" name="matchName" required />
             <!--<select id="matchName" name="matchName">
               <% for (const matchName of matchNames) { %>
@@ -42,15 +25,38 @@
             </select>-->
           </div>
           <div class="get-information">
+            <label for="mainNickname">Your nickname (not more than 8 characters):</label>
+            <input
+              type="text"
+              id="mainNickname"
+              name="mainNickname"
+              required
+            />
+          </div>
+          <div class="get-information">
+            <label for="opponentNickname">Your opponent's nickname (not more than 8 characters):</label>
+            <input
+              type="text"
+              id="opponentNickname"
+              name="opponentNickname"
+              required
+            />
+          </div>
+          <div class="get-information">
             <label for="winner">Who is the winner?</label>
             <input type="text" id="winner" name="winner" required />
           </div>
           <div class="get-information">
             <label for="describe">Share some thoughts about your match</label>
-            <textarea id="describe" name="describe" required rows="10"></textarea>
+            <textarea id="describe" name="describe" required ="10"></textarea>
+          </div>
+          <div class="get-information">
+            <label for="fileUpload">Share a photo of your match</label>
+            <input type="file" name="fileUpload" id="fileUpload" required accept="image/*">
+            <img id="image-preview" src="" alt="Match photo">
           </div>
           <div id="button">
-            <button type="submit" id="confirm">Share your diary</button>
+            <button type="submit" id="confirm-share">Share your diary</button>
           </div>
         </form>
       </article>

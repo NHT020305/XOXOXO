@@ -1,21 +1,24 @@
 body {
   background-image: url("/images/4990858.jpg");
-  margin-bottom: 8rem;
+  margin-bottom: 1rem
 }
 
 h1 {
-  margin-top: 10rem;
+  margin-top: 7rem;
   font-size: 96px;
-  margin-bottom: -1rem;
+  margin-bottom: -3rem;
 }
 
 .explore-intro {
   font-size: 48px;
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
 }
 
 #no-game {
+  margin: 6rem;
   color: brown;
+  margin-top: 4rem;
+  margin-bottom: 6rem;
 }
 
 .add-diary,
@@ -31,7 +34,11 @@ h1 {
   border-radius: 20px;
   cursor: pointer;
   text-decoration: none;
-  margin-bottom: 5rem;
+  margin-bottom: 4rem;
+}
+
+.add-diary {
+  display: inline-block;
 }
 
 .add-diary:hover,
@@ -53,7 +60,7 @@ h1 {
 .diary-item {
   text-align: center;
   position: relative;
-  width: 1000px;
+  width: 60rem;
   margin-top: 1rem;
   left: -1.2rem;
   border: 5px solid rgb(12, 4, 52);
@@ -61,7 +68,7 @@ h1 {
   padding: 0 1rem 3rem 1rem;
   background-color: rgb(12, 4, 52);
   display: inline-block;
-  margin-bottom: 100px;
+  margin-bottom: 5rem;
 }
 
 .diary-item .match-name-display {
@@ -77,6 +84,15 @@ h1 {
   grid-template-columns: repeat(2, 25rem);
   justify-content: center;
   gap: 5rem;
+  margin-top: -2rem;
+}
+
+.diary-item .button-display {
+  display: grid;
+  grid-template-columns: repeat(3, 16rem);
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
 }
 
 .diary-item .players-name-display p {
@@ -124,7 +140,8 @@ h1 {
 }
 
 .view-main-player-profile,
-.delete {
+.delete,
+.edit {
   display: inline-block;
   padding: 5px 20px;
   border-radius: 5px;
@@ -144,7 +161,13 @@ h1 {
   border: 5px solid brown;
   color: white;
   display: inline-block;
-  width: 25rem;
+  width: 16rem;
+}
+
+.edit {
+  background-color: darkgreen;
+  border: 5px solid darkgreen;
+  color: white;
 }
 
 .view-main-player-profile:hover {
@@ -157,9 +180,14 @@ h1 {
   border: 5px solid red;
 }
 
+.edit:hover {
+  background-color: green;
+  border: 5px solid green;;
+}
+
 .date {
   color: rgb(215, 187, 247);
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
   font-size: 36px;
 }
 

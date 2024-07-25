@@ -81,9 +81,14 @@ article #button {
   margin-left: 10px;
 }
 
+#button-update {
+  display: grid;
+  grid-template-columns: repeat(2, 18rem);
+  justify-content: center;
+  gap: 2rem;
+}
+
 article button {
-  display: inline;
-  padding: 5px 20px;
   border-radius: 5px;
   font-family: "Shrikhand", serif;
   font-size: 28px;
@@ -100,14 +105,39 @@ article button:hover {
   border: 5px solid rebeccapurple;
 }
 
+#confirm-share {
+  padding: 0.5rem 1rem;
+}
+
 #cancel {
-  color: rgb(140, 0, 255);
-  border: 1px solid white;
-  padding: 8px 20px;
+  padding: 5px 20px;
+  border-radius: 5px;
+  font-family: "Shrikhand", serif;
+  font-size: 28px;
   background-color: white;
+  color: rgb(140, 0, 255);
+  /*border: 1px solid rgb(140, 0, 255);*/
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 1rem;
+  text-decoration: none;
 }
 
 #cancel:hover {
-  color: rebeccapurple;
-  border: 1px solid rgb(140, 0, 255);
+  background-color: rebeccapurple;
+  /*border: 1px solid rebeccapurple;*/
+  color: white;
+}
+
+.update-diary-matchName {
+  color: goldenrod;
+  text-transform: uppercase;
+}
+
+#image-preview {
+  margin-top: 1rem;
+  margin-left: -7rem;
+  display: none;
+  width: 52.5rem;
+  border-radius: 1rem;
 }
