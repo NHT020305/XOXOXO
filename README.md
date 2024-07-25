@@ -30,8 +30,8 @@ At Tic Tac Toe Online, our mission is to bring people together through the simpl
 HTML | CSS | JavaScript 
 
 **Backend:**
-
 ESJ | Node.js | Express 
+
 **Database:**
 MongoDB
 
