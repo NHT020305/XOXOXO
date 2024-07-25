@@ -26,14 +26,13 @@ At Tic Tac Toe Online, our mission is to bring people together through the simpl
 
 ## Tech Stack
 
-**Frontend**
-
+**Frontend:**
 HTML | CSS | JavaScript 
 
-**Backend**
+**Backend:**
 ESJ | Node.js | Express 
 
-**Database**
+**Database:**
 MongoDB
 
 
