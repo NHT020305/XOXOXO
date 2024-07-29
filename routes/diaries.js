@@ -71,7 +71,7 @@ router.get("/explore/:id/edit", async function (req, res) {
     return res.status(404).render("404");
   }
 
-  res.render("update-diary", { diary: diary, comments: comments });
+  res.render("update-diary", { diary: diary });
 });
 
 router.post("/explore/:id/edit", async function (req, res) {
@@ -106,7 +106,7 @@ router.post("/explore/:id/delete", async function (req, res) {
     .collection("diaries")
     .deleteOne({ _id: diaryId });
   
-  const comment = await db.getDb().collection('comments').deleteOne({ diaryId: diaryId });
+  const comment = await db.getDb().collection('comments').deleteMany({ diaryId: diaryId });
 
   res.redirect("/explore");
 });

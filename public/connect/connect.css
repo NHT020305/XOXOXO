@@ -7,7 +7,6 @@ article {
   font-family: "Pacifico", cursive;
   text-align: center;
   position: relative;
-  left: 320px;
   top: 200px;
   width: 600px;
   border: 5px solid rgb(12, 4, 52);
@@ -15,7 +14,7 @@ article {
   padding: 0 150px 30px 150px;
   background-color: rgb(12, 4, 52);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  display: block;
+  display: inline-block;
   margin-bottom: 100px;
 }
 

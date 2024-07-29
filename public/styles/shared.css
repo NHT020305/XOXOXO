@@ -1,5 +1,7 @@
 body {
   background-image: url("/images/5026543.jpg");
+  background-position: center;
+  background-attachment: fixed;
   text-align: center;
   font-family: "Pacifico", cursive;
   margin: 0;
@@ -101,7 +103,9 @@ body {
 }
 
 #logo-section {
-  width: 200px
+  width: 200px;
+  position: relative;
+  left: -5rem;
 }
 
 #bar #logo-section p {
@@ -150,7 +154,7 @@ header {
 #start-button {
   list-style: none;
   margin-top: -130px;
-  margin-left: 820px
+  margin-left: 870px
 }
 
 .start {
@@ -196,7 +200,7 @@ header {
   margin-top: 70px;
   margin-bottom: -220px;
   border-radius: 100px;
-  margin-left: -300px;
+  margin-left: -400px;
   box-shadow: 10px 20px 20px rebeccapurple;
 }
 

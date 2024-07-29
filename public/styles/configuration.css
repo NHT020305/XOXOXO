@@ -5,21 +5,15 @@
 
 #game-configuration ol {
   list-style: none;
-  text-align: center;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: center;
-  justify-content: space-between;
-  margin: 80px;
-  margin-top: 100px;
-  margin-bottom: 10px;
-  margin-left: 70px;
+  display: grid;
+  grid-template-columns: repeat(2, 40rem);
+  justify-content: center;
+  margin-top: 5rem;
+  gap: 10rem;
 }
 
 #game-configuration li {
   display: inline-block;
-  width: 600px;
   padding: 0 0 1rem 0;
   background-color: rgb(12, 4, 52);
   border-radius: 50px;
@@ -42,6 +36,15 @@
   font-weight: bold;
   color: white;
   margin-bottom: 10px;
+}
+
+.button-game {
+  margin-left: 3rem;
+  display: grid;
+  grid-template-columns: repeat(2, 22rem);
+  justify-content: center;
+  margin-top: 5rem;
+  gap: 12rem;
 }
 
 article button {
@@ -67,23 +70,18 @@ article button:hover {
   color: rgb(12, 4, 52);
   background-color: rgb(215, 187, 247);
   border: 5px solid rgb(12, 4, 52);
-  margin-top: 100px;
-  margin-bottom: 20px;
-  margin-left: 30px;
   font-size: 48px;
   box-shadow: 5px 5px rgb(12, 4, 52);
-  padding: 1rem 1.5rem
+  padding: 1rem;
 }
 
 #play:hover {
   background-color: rebeccapurple;
-  color: white
+  color: white;
 }
 
 #start {
   text-decoration: none;
-  margin-left: 140px;
-  width: 15%;
   border-radius: 30px;
   font-family: "Shrikhand", serif;
   color: white;
@@ -91,10 +89,10 @@ article button:hover {
   border: 5px solid rgb(12, 4, 52);
   font-size: 48px;
   box-shadow: 5px 5px rgb(12, 4, 52);
-  padding: 1rem 1.5rem
+  padding: 1rem;
 }
 
 #start:hover {
-  background-color: rgb(117, 26, 26);;
-  color: white
+  background-color: rgb(117, 26, 26);
+  color: white;
 }
