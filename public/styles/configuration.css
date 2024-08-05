@@ -1,5 +1,4 @@
 #game-configuration {
-  margin-left: -20px;
   margin-bottom: 50px;
 }
 
@@ -8,8 +7,10 @@
   display: grid;
   grid-template-columns: repeat(2, 40rem);
   justify-content: center;
+  margin: 0;
   margin-top: 5rem;
-  gap: 10rem;
+  gap: 6rem;
+  padding: 0;
 }
 
 #game-configuration li {
@@ -17,7 +18,7 @@
   padding: 0 0 1rem 0;
   background-color: rgb(12, 4, 52);
   border-radius: 50px;
-  border: 10px solid white;
+  border: 10px solid rebeccapurple;
 }
 
 #game-configuration h3 {
@@ -38,13 +39,19 @@
   margin-bottom: 10px;
 }
 
+#game-configuration .edit {
+  margin: 0;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 .button-game {
-  margin-left: 3rem;
   display: grid;
   grid-template-columns: repeat(2, 22rem);
   justify-content: center;
+  margin: 0rem;
   margin-top: 5rem;
-  gap: 12rem;
+  gap: 7rem;
 }
 
 article button {
@@ -54,8 +61,7 @@ article button {
   color: rgb(12, 4, 52);
   border: 0px;
   border-radius: 25px;
-  margin-bottom: 10px;
-  margin-left: 0;
+  
 }
 
 article button:hover {
@@ -65,6 +71,7 @@ article button:hover {
 }
 
 #play {
+  margin: 0;
   border-radius: 30px;
   font-family: "Shrikhand", serif;
   color: rgb(12, 4, 52);

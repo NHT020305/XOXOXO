@@ -6,18 +6,41 @@
     <link rel="stylesheet" href="/connect/connect.css" />
     <script src="/scripts/setting.js" defer></script>
     <script src="/scripts/file-preview.js" defer></script>
+    <script src="/connect/connect.js" defer></script>
     <title>XOXOXO | New diary</title>
   </head>
   <body>
-    <%- include('includes/navigation.ejs') %>
-    <%- include('includes/menu.ejs') %>
+    <%- include('includes/navigation.ejs') %> <%- include('includes/menu.ejs')
+    %>
     <main>
       <article>
         <h2>Share your XOXOXO diary</h2>
-        <form action="/explore" method='POST' enctype="multipart/form-data" id="share-diary">
+        <form
+          action="/explore"
+          method="POST"
+          enctype="multipart/form-data"
+          id="share-diary"
+        >
           <div class="get-information">
-            <label for="matchName">Name of the match:</label>
-            <input type="text" id="matchName" name="matchName" required />
+            <label for="matchName"
+              >Name of the match (not more than 20 characters):</label
+            >
+            <ul>
+              <li>
+                <input
+                  type="text"
+                  id="matchName"
+                  name="matchName"
+                  maxlength="20"
+                  required
+                />
+              </li>
+              <li>
+                <span class="charcounts">
+                  <span id="remaining-chars-matchName">20</span>/20
+                </span>
+              </li>
+            </ul>
             <!--<select id="matchName" name="matchName">
               <% for (const matchName of matchNames) { %>
                 <option value=""><%= matchName.name %></option>
@@ -25,35 +48,85 @@
             </select>-->
           </div>
           <div class="get-information">
-            <label for="mainNickname">Your nickname (not more than 8 characters):</label>
-            <input
-              type="text"
-              id="mainNickname"
-              name="mainNickname"
-              required
-            />
+            <label for="mainNickname"
+              >Your nickname (not more than 8 characters):</label
+            >
+            <ul>
+              <li>
+                <input
+                  type="text"
+                  id="mainNickname"
+                  name="mainNickname"
+                  maxlength="8"
+                  required
+                />
+              </li>
+              <li>
+                <span class="charcounts">
+                  <span id="remaining-chars-mainNickname">8</span>/8
+                </span>
+              </li>
+            </ul>
           </div>
           <div class="get-information">
-            <label for="opponentNickname">Your opponent's nickname (not more than 8 characters):</label>
-            <input
-              type="text"
-              id="opponentNickname"
-              name="opponentNickname"
-              required
-            />
+            <label for="opponentNickname"
+              >Your opponent's nickname (not more than 8 characters):</label
+            >
+            <ul>
+              <li>
+                <input
+                  type="text"
+                  id="opponentNickname"
+                  name="opponentNickname"
+                  maxlength="8"
+                  required
+                />
+              </li>
+              <li>
+                <span class="charcounts">
+                  <span id="remaining-chars-opponentNickname">8</span>/8
+                </span>
+              </li>
+            </ul>
           </div>
           <div class="get-information">
             <label for="winner">Who is the winner?</label>
-            <input type="text" id="winner" name="winner" required />
+            <ul>
+              <li>
+                <input
+                  type="text"
+                  id="winner"
+                  name="winner"
+                  maxlength="8"
+                  required
+                />
+              </li>
+              <li>
+                <span class="charcounts">
+                  <span id="remaining-chars-winner">8</span>/8
+                </span>
+              </li>
+            </ul>
           </div>
           <div class="get-information">
-            <label for="describe">Share some thoughts about your match</label>
-            <textarea id="describe" name="describe" required rows="10"></textarea>
+            <label for="describe" id="describe-label">Share some thoughts about your match</label>
+            <textarea
+              id="describe"
+              name="describe"
+              required
+              rows="10"
+            ></textarea>
           </div>
           <div class="get-information">
-            <label for="fileUpload">Share a photo of your match</label>
-            <input type="file" name="fileUpload" id="fileUpload" required accept="image/*">
-            <img id="image-preview" src="" alt="Match photo">
+            <label for="fileUpload" id="file-label">Share a photo of your match</label>
+            <input
+              type="file"
+              name="fileUpload"
+              id="fileUpload"
+              required
+              accept="image/*"
+            />
+            <img id="image-preview" src="" alt="Match photo" />
           </div>
           <div id="button">
             <button type="submit" id="confirm-share">Share your diary</button>

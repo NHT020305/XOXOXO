@@ -1,15 +1,41 @@
 <li>
   <article class="diary-item">
     <h2 class="match-name-display"><%= diary.matchName %></h2>
-    <!--<div class="players-name-display">
-      <p>Main player: <span><%= diary.mainNickname %></span></p>
-      <p>Invited player: <span><%= diary.opponentNickname %></span></p>
-    </div>
-    <p class="winner-display"><span><%= diary.winner %></span> won the game</p>
-    <p class="description"><%= diary.describe %></p>-->
-    <p class="date">Last updated at <span class="date-display"><%= diary.date %></span></p>
+    <p class="date">
+      Last updated <% if (((new Date() - diary.date) / (1000 * 60)) < 1) { %>
+      <span class="date-display"> just now </span>
+      <% } else if (((new Date() - diary.date) / (1000 * 60)) < 60 && ((new
+      Date() - diary.date) / (1000 * 60)) >= 1) { %>
+      <span class="date-display"
+        ><%= Math.floor((new Date() - diary.date) / (1000 * 60)) %>
+      </span>
+      <span class="type-date"
+        >minute<%= Math.floor((new Date() - diary.date) / (1000 * 60)) > 1 ? 's'
+        : '' %> ago</span
+      >
+      <% } else if (((new Date() - diary.date) / (1000 * 60)) < 1440 && ((new
+      Date() - diary.date) / (1000 * 60)) >= 60) { %>
+      <span class="date-display"
+        ><%= Math.floor((new Date() - diary.date) / (1000 * 60 * 60)) %>
+      </span>
+      <span class="type-date"
+        >hour<%= Math.floor((new Date() - diary.date) / (1000 * 60 * 60)) > 1 ?
+        's' : '' %> ago</span
+      >
+      <% } else { %>
+      <span class="date-display"
+        ><%= Math.floor((new Date() - diary.date) / (1000 * 60 * 60 * 24)) %>
+      </span>
+      <span class="type-date"
+        >day<%= Math.floor((new Date() - diary.date) / (1000 * 60 * 60 * 24)) >
+        1 ? 's' : '' %> ago</span
+      >
+      <% } %>
+    </p>
     <div class="button-display">
-      <a class="view-main-player-profile" href="/explore/<%= diary._id %>">View more details</a>
+      <a class="view-main-player-profile" href="/explore/<%= diary._id %>"
+        >View more details</a
+      >
       <a class="edit" href="/explore/<%= diary._id %>/edit">Edit diary</a>
       <form action="/explore/<%= diary._id %>/delete" method="POST">
         <button class="delete">Delete diary</button>

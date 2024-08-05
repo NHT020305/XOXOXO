@@ -7,7 +7,7 @@
     color: white;
     border: 5px solid rgb(12, 4, 52);
     background: rebeccapurple;
-    width: 1000px;
+    width: 65rem;
     padding: 0 3rem 3rem 3rem;
     display: none;
     border-radius: 50px;
@@ -62,8 +62,8 @@ span {
     list-style: none;
     padding: 0;
     display: grid;
-    grid-template-columns: repeat(9, 6rem);
-    grid-template-rows: repeat(9, 6rem);
+    grid-template-columns: repeat(9, 7rem);
+    grid-template-rows: repeat(9, 7rem);
     justify-content: center;
     gap: 0;
     margin-bottom: 100px;
@@ -73,13 +73,13 @@ span {
 #game-board li {
     font-family: "Pacifico", cursive;
     background-color: rgb(215, 187, 247);
-    border: 0.09rem solid rgb(12, 4, 52);
+    border: 0.1rem solid rgb(12, 4, 52);
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
-    font-size: 48px;
+    font-size: 54px;
     font-weight: bold;
 }
 

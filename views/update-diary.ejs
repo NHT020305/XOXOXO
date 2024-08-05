@@ -5,13 +5,12 @@
     <link rel="stylesheet" href="/styles/shared.css" />
     <link rel="stylesheet" href="/connect/connect.css" />
     <script src="/scripts/setting.js" defer></script>
-    <title>XOXOXO | New diary</title>
+    <script src="/connect/connect.js" defer></script>
+    <title>XOXOXO | My blog | <%= diary.matchName %> | Update</title>
   </head>
   <body>
-    <%- include('includes/navigation.ejs') %> <%- include('includes/menu.ejs')
-    %>
     <main>
-      <article>
+      <article class="body-with-no-menu">
         <h2 class="update-diary-matchName"><%= diary.matchName %></h2>
         <form
           action="/explore/<%= diary._id %>/edit"
@@ -19,17 +18,27 @@
           id="share-diary"
         >
           <div class="get-information">
-            <label for="matchName">Rename the match:</label>
-            <input
-              type="text"
-              id="matchName"
-              name="matchName"
-              value="<%= diary.matchName %>"
-              required
-            />
+            <label for="matchName">Edit match name (not more than 20 characters):</label>
+            <ul>
+              <li>
+                <input
+                  type="text"
+                  id="matchName"
+                  name="matchName"
+                  maxlength="20"
+                  value="<%= diary.matchName %>"
+                  required
+                />
+              </li>
+              <li>
+                <span class="charcounts">
+                  <span id="remaining-chars-matchName">20</span>/20
+                </span>
+              </li>
+            </ul>
           </div>
           <div class="get-information">
-            <label for="describe">Share some thoughts about your match</label>
+            <label for="describe" id="describe-label">Edit match description:</label>
             <textarea id="describe" name="describe" required rows="10"><%= diary.describe %></textarea>
           </div>
           <div id="button-update">

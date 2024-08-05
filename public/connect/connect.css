@@ -1,21 +1,20 @@
 body {
   background-image: url("/images/4990858.jpg");
-  margin-bottom: 300px;
+  margin-bottom: 10rem;
 }
 
 article {
   font-family: "Pacifico", cursive;
   text-align: center;
-  position: relative;
-  top: 200px;
-  width: 600px;
+  margin-top: 15rem;
+  width: 60rem;
   border: 5px solid rgb(12, 4, 52);
   border-radius: 30px;
-  padding: 0 150px 30px 150px;
+  /*padding: 0 150px 30px 150px;*/
+  padding: 2rem;
   background-color: rgb(12, 4, 52);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   display: inline-block;
-  margin-bottom: 100px;
 }
 
 article h2 {
@@ -32,53 +31,64 @@ article h2 {
 article label {
   color: rgb(215, 187, 247);
   display: block;
-  margin-bottom: 20px;
-  margin-top: -10px;
-  margin-left: -7rem;
   font-weight: bold;
   font-size: 28px;
   text-align: left;
 }
 
-article input {
-  width: 51.3rem;
-  border: 2px solid white;
-  border-radius: 5px;
-  font-size: 24px;
-  font-family: "Shrikhand", serif;
-  margin-bottom: 10px;
-  color: rebeccapurple;
-  margin-left: -7rem;
-  padding: 0.5rem;
-}
-
+article input,
 article textarea {
+  width: 55rem;
+  border: 2px solid white;
+  border-radius: 5px;
+  font-size: 24px;
+  font-family: "Shrikhand", serif;
+  color: rebeccapurple;
+  padding: 0.5rem;
+  margin-right: 0;
+}
+
+article #matchName {
+  width: 52.5rem;
+}
+
+#describe-label,
+#file-label,
+#commentTitle-label,
+#commentContent-label {
+  margin-bottom: 1rem;
+}
+
+#describe,
+#fileUpload,
+#commentTitle,
+#commentContent {
+  width: 59rem;
+}
+
+/*.get-information #matchName {
+  border-radius: 5px;
+  border: 1px solid white;
+  margin-top: 1rem;
+  height: 3.5rem;
+  width: 60rem;
+}*/
+
+#fileUpload {
+  margin-bottom: 1rem;
+}
+
+/*article select {
+  color: rebeccapurple;
   width: 51.3rem;
   border: 2px solid white;
   border-radius: 5px;
   font-size: 24px;
   font-family: "Shrikhand", serif;
   margin-bottom: 10px;
-  color: rebeccapurple;
   margin-left: -7rem;
   padding: 0.5rem;
-}
-
-article select {
-  color: rebeccapurple;
-  width: 51.3rem;
-  border: 2px solid white;
-  border-radius: 5px;
-  font-size: 24px;
-  font-family: "Shrikhand", serif;
-  margin-bottom: 10px;
-  margin-left: -7rem;
-  padding: 0.5rem;
-}
-
-article #button {
-  margin-left: 10px;
-}
+}*/
 
 #button-update {
   display: grid;
@@ -135,8 +145,32 @@ article button:hover {
 
 #image-preview {
   margin-top: 1rem;
-  margin-left: -7rem;
   display: none;
-  width: 52.5rem;
+  width: 60rem;
   border-radius: 1rem;
+}
+
+.get-information ul {
+  padding: 0;
+  list-style: none;
+}
+
+.get-information li {
+  display: inline;
+}
+
+.get-information .charcounts {
+  display: inline;
+  font-family: "Shrikhand", serif;
+  font-size: 28px;
+  font-weight: bold;
+  color: rgb(215, 187, 247);
+}
+
+.get-information .charcounts span {
+  color: darkgoldenrod;
+}
+
+.body-with-no-menu {
+  margin-top: 10rem;
 }

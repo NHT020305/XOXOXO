@@ -24,7 +24,9 @@ const router = express.Router();
 
 const db = require("../data/database");
 
+
 router.get("/explore/:id", async function (req, res) {
+  
   let diaryId = req.params.id;
 
   try {
@@ -42,22 +44,15 @@ router.get("/explore/:id", async function (req, res) {
     return res.status(404).render("404");
   }
 
-  /*const comment = {
-    diaryId: diaryId,
-    title: "abc",
-    content: "def",
-  };*/
-
-  const comments = await db.getDb().collection("comments").find({ diaryId: diaryId }).toArray();
-
-  /*const result = await db
+  const comments = await db
     .getDb()
     .collection("comments")
     .find({ diaryId: diaryId })
-    .toArray();*/
+    .toArray();
 
-  res.render("invited-player", { diary: diary, comments: comments});
+  res.render("invited-player", { diary: diary, comments: comments });
 });
+
 
 router.get("/explore/:id/edit", async function (req, res) {
   const diaryId = req.params.id;
@@ -74,12 +69,14 @@ router.get("/explore/:id/edit", async function (req, res) {
   res.render("update-diary", { diary: diary });
 });
 
+
 router.post("/explore/:id/edit", async function (req, res) {
+  
   const diaryId = new ObjectId(req.params.id);
 
   let currentDate = new Date();
-  let date = currentDate.toLocaleDateString();
-  let time = currentDate.toLocaleTimeString();
+  /*let date = currentDate.toLocaleDateString();
+  let time = currentDate.toLocaleTimeString();*/
 
   const result = await db
     .getDb()
@@ -90,13 +87,14 @@ router.post("/explore/:id/edit", async function (req, res) {
         $set: {
           matchName: req.body.matchName,
           describe: req.body.describe,
-          date: date + " " + time,
+          date: currentDate,
         },
       }
     );
 
   res.redirect("/explore/" + req.params.id);
 });
+
 
 router.post("/explore/:id/delete", async function (req, res) {
   const diaryId = new ObjectId(req.params.id);
@@ -105,11 +103,15 @@ router.post("/explore/:id/delete", async function (req, res) {
     .getDb()
     .collection("diaries")
     .deleteOne({ _id: diaryId });
-  
-  const comment = await db.getDb().collection('comments').deleteMany({ diaryId: diaryId });
+
+  const comment = await db
+    .getDb()
+    .collection("comments")
+    .deleteMany({ diaryId: diaryId });
 
   res.redirect("/explore");
 });
+
 
 router.get("/explore", async function (req, res) {
   let order = req.query.order;
@@ -128,8 +130,8 @@ router.get("/explore", async function (req, res) {
 
   storedDiaries.sort(function (diaryA, diaryB) {
     if (
-      (order === "asc" && diaryA.matchName > diaryB.matchName) ||
-      (order === "desc" && diaryA.matchName < diaryB.matchName)
+      (order === "asc" && diaryA.date > diaryB.date) ||
+      (order === "desc" && diaryA.date < diaryB.date)
     ) {
       return 1;
     }
@@ -143,11 +145,12 @@ router.get("/explore", async function (req, res) {
   });
 });
 
+
 router.get("/connect", async function (req, res) {
   const matchNames = await db.getDb().collection("matchNames").find().toArray();
-  //console.log(matchNames);
   res.render("connect", { matchNames: matchNames });
 });
+
 
 /*router.post("/connect", function (req, res) {
 
@@ -163,7 +166,9 @@ router.get("/connect", async function (req, res) {
   res.redirect("/confirm");
 });*/
 
+
 router.post("/explore", upload.single("fileUpload"), async function (req, res) {
+  
   /*const matchNameId = new ObjectId(req.params.matchName);
   const matchName = await db
     .getDb()
@@ -173,8 +178,8 @@ router.post("/explore", upload.single("fileUpload"), async function (req, res) {
   const uploadedImage = req.file;
 
   let currentDate = new Date();
-  let date = currentDate.toLocaleDateString();
-  let time = currentDate.toLocaleTimeString();
+  /*let date = currentDate.toLocaleDateString();
+  time = currentDate.toLocaleTimeString();*/
 
   const newDiary = {
     mainNickname: req.body.mainNickname,
@@ -183,16 +188,15 @@ router.post("/explore", upload.single("fileUpload"), async function (req, res) {
     winner: req.body.winner,
     describe: req.body.describe,
     imagePath: uploadedImage.path,
-    date: date + " " + time,
+    date: currentDate //date + " " + time,
   };
 
-  //const comments = await db.getDb().collection("comments");
   const result = await db.getDb().collection("diaries").insertOne(newDiary);
 
-  //console.log(uploadedImage);
   console.log(result);
   res.redirect("/confirm");
 });
+
 
 /*router.post("/explore", async function (req, res) {
 
@@ -210,16 +214,20 @@ router.post("/explore", upload.single("fileUpload"), async function (req, res) {
 
 });*/
 
+
 router.get("/confirm", function (req, res) {
   res.render("confirm");
 });
 
+
 router.get("/explore/:id/comment", async function (req, res) {
+  
   const diaryId = new ObjectId(req.params.id);
   const diary = await db
     .getDb()
     .collection("diaries")
     .findOne({ _id: diaryId });
+
   const comments = await db
     .getDb()
     .collection("comments")
@@ -229,7 +237,9 @@ router.get("/explore/:id/comment", async function (req, res) {
   res.render("diary-comments", { diary: diary, comments: comments });
 });
 
+
 router.post("/explore/:id/comment", async function (req, res) {
+  
   const diaryId = new ObjectId(req.params.id);
 
   const comment = {
@@ -242,5 +252,36 @@ router.post("/explore/:id/comment", async function (req, res) {
 
   res.redirect("/explore/" + req.params.id);
 });
+
+
+router.get("/explore/:id1/comment/:id2/delete", async function (req, res) {
+  
+  const diaryId = new ObjectId(req.params.id1);
+  
+  const commentId = new ObjectId(req.params.id2);
+
+  const comment = await db
+    .getDb()
+    .collection("comments")
+    .findOne({ diaryId: diaryId, _id: commentId });
+
+  res.render("invited-player", { comment: comment });
+});
+
+
+router.post("/explore/:id1/comment/:id2/delete", async function (req, res) {
+  
+  const diaryId = new ObjectId(req.params.id1);
+  
+  const commentId = new ObjectId(req.params.id2);
+
+  const comment = await db
+    .getDb()
+    .collection("comments")
+    .deleteOne({ diaryId: diaryId, _id: commentId })
+
+  res.redirect("/explore/" + req.params.id1);
+});
+
 
 module.exports = router;

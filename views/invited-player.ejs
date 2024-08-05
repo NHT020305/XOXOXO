@@ -9,31 +9,48 @@
     <title>XOXOXO | My blog | <%= diary.matchName %></title>
   </head>
   <body>
-    <%- include('includes/navigation.ejs') %>
-    <%- include('includes/menu.ejs')%>
     <main>
-      <div class="button-each-diary">
-        <a class="add-diary" href="/explore">Back to Blog</a>
-        <a class="add-diary" id="comment-on-diary" href="/explore/<%= diary._id %>/comment">Comment on diary</a>
-      </div>
       <article class="diary-item">
         <h2 class="match-name-display"><%= diary.matchName %></h2>
-        <p class="date">Last updated at <span class="date-display"><%= diary.date %></span></p>
+        <p class="date">
+          Last updated at
+          <span class="date-display"
+            ><%= diary.date.toLocaleDateString() + " " +
+            diary.date.toLocaleTimeString() %></span
+          >
+        </p>
         <div class="players-name-display">
           <p>Main player: <span><%= diary.mainNickname %></span></p>
           <p>Invited player: <span><%= diary.opponentNickname %></span></p>
         </div>
         <h2 class="result">Match result:</h2>
-        <p class="winner-display"><span><%= diary.winner %></span> won the game</p>
-        <h2 class="comment">Main player's comment:</h2>
+        <p class="winner-display">
+          <span><%= diary.winner %></span> won the game
+        </p>
+        <h2 class="comment">Match description:</h2>
         <p class="description"><%= diary.describe %></p>
-        <img class="match-image" src='/<%= diary.imagePath %>' alt="Match photo">
+        <img
+          class="match-image"
+          src="/<%= diary.imagePath %>"
+          alt="Match photo"
+        />
       </article>
+      <div class="button-each-diary">
+        <a class="add-diary" href="/explore">Back to Blog</a>
+        <a
+          class="add-diary"
+          id="comment-on-diary"
+          href="/explore/<%= diary._id %>/comment"
+          >Comment</a
+        >
+      </div>
       <section class="comment-users">
-        <h2>Comments</h2>
+        <h2>Comments (<%= comments.length %>)</h2>
+        <hr />
         <ul id="comment-list">
           <% for (const comment of comments) { %> <%-
-            include('includes/comment/comment-item.ejs', { comment : comment }) %> <% } %>
+          include('includes/comment/comment-item.ejs', { comment : comment }) %>
+          <% } %>
         </ul>
       </section>
     </main>

@@ -1,6 +1,9 @@
 <li>
   <article class="comment-item">
-    <h2><%= comment.title %></h2>
-    <p><%= comment.content %></p>
+    <h3><%= comment.title %></h3>
+    <p class="comment-item-content"><%= comment.content %></p>
+    <form action="/explore/<%= diary._id %>/comment/<%= comment._id %>/delete" method="POST">
+      <button class="delete">Delete comment</button>
+    </form>
   </article>
 </li>

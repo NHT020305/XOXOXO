@@ -14,8 +14,8 @@
       <h1>Welcome!</h1>
       <% if (numberOfMatches === 0) { %>
       <p class="explore-intro" id="no-game">
-        Unfortunately, you have no XOXOXO diaries to share, play some games or add
-        existing XOXOXO diaries to your Blog
+        Unfortunately, you have no XOXOXO diaries to share, play some games or
+        add existing XOXOXO diaries to your Blog
       </p>
       <% } else { %>
       <p class="explore-intro">
@@ -25,7 +25,11 @@
       </p>
       <form action="/explore" method="GET">
         <input type="hidden" value="<%= nextOrder %>" name="order" />
-        <button class="btn">Change order</button>
+        <% if (nextOrder === 'desc') { %>
+        <button class="btn" id="change-order">Newest match</button>
+        <% } else { %>
+        <button class="btn" id="change-order"> Oldest match</button>
+        <% } %>
       </form>
       <ul id="diaries-list">
         <% for (const diary of diaries) { %> <%-

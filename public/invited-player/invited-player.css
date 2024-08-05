@@ -1,10 +1,6 @@
 .diary-item {
   width: 70rem;
-  margin-left: 2rem;
-}
-
-body {
-  margin: 0;
+  margin-top: 10rem;
 }
 
 .add-diary {
@@ -39,7 +35,7 @@ body {
   grid-template-columns: repeat(2, 25rem);
   justify-content: center;
   gap: 5rem;
-  margin-top: 10rem;
+  margin-top: 2rem;
 }
 
 .diary-item .players-name-display {
@@ -52,5 +48,58 @@ body {
 }
 
 #comment-list {
+  margin-top: 2rem;
+  padding: 0;
   list-style: none;
+  display: inline-block;
+}
+
+
+.comment-users h2 {
+  text-align: left;
+  margin-left: 10rem;
+  color: rebeccapurple;
+  font-family: "Shrikhand", serif;
+  font-size: 54px;
+  margin-bottom: -1rem;
+}
+
+.comment-item {
+  display: inline-block;
+  width: 70rem;
+  padding: 2rem;
+  border-radius: 2rem;
+  background-color: rgb(12, 4, 52);
+  /*border: 10px solid rgb(12, 4, 52);*/
+  margin-bottom: 3rem;
+}
+
+.comment-item h3 {
+  text-align: left;
+  color: wheat;
+  font-family: "Shrikhand", serif;
+  font-size: 36px;
+}
+
+.comment-item p {
+  color: rgb(215, 187, 247);
+  text-align: left;
+  font-size: 24px;
+}
+
+hr {
+  border: none;
+  height: 0.5rem;
+  border-radius: 0.5rem;
+  width: 78%;
+  margin-bottom: 1rem;
+  background-color: rgb(12, 4, 52);
+}
+
+.delete {
+  margin-top: 2rem;
+}
+
+.comment-item .comment-item-content {
+  word-wrap: break-word;
 }

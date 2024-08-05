@@ -2,9 +2,9 @@ aside {
   font-family: "Pacifico", cursive;
   position: fixed;
   text-align: center;
-  left: 500px;
-  top: 170px;
-  width: 400px;
+  left: 23.5rem;
+  top: 10rem;
+  width: 30rem;
   border: 5px solid white;
   border-radius: 30px;
   padding: 0 150px 30px 150px;
@@ -21,13 +21,13 @@ aside h2 {
 aside label {
   display: block;
   margin-bottom: 20px;
-  margin-top: -10px;
+  margin-top: 0;
   font-weight: bold;
   font-size: 24px;
 }
 
 aside input {
-  width: 400px;
+  width: 24rem;
   height: 1.5rem;
   border: 2px solid rgb(140, 0, 255);
   padding: 1rem;
@@ -46,22 +46,26 @@ aside #valid {
 }
 
 aside #button {
-  margin-left: 10px;
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 10rem);
+  justify-content: center;
+  gap: 0.5rem
 }
 
 aside button {
   display: inline;
-  padding: 5px 20px;
-  margin-left: 0px;
+  padding: 0.5rem;
   border-radius: 5px;
   font-family: "Shrikhand", serif;
   font-size: 24px;
+  margin: 0;
 }
+
 
 #cancel {
   color: rgb(140, 0, 255);
   border: 1px solid white;
-  padding: 8px 20px;
   background-color: white;
 }
 

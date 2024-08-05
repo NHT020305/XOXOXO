@@ -53,8 +53,13 @@ h1 {
   font-size: 72px;
 }
 
+#change-order {
+  width: 20rem;
+}
+
 #diaries-list {
   list-style: none;
+  padding: 0;
 }
 
 .diary-item {
@@ -62,10 +67,9 @@ h1 {
   position: relative;
   width: 60rem;
   margin-top: 1rem;
-  left: -1.2rem;
-  border: 5px solid rgb(12, 4, 52);
+  /*border: 10px solid rgb(12, 4, 52);*/
   border-radius: 30px;
-  padding: 0 1rem 3rem 1rem;
+  padding: 2rem;
   background-color: rgb(12, 4, 52);
   display: inline-block;
   margin-bottom: 5rem;
@@ -191,6 +195,7 @@ h1 {
   font-size: 36px;
 }
 
-.date-display {
+.date-display, .type-date {
+  font-family: "Shrikhand", serif;
   color: gold;
 }

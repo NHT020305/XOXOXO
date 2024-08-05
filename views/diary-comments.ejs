@@ -5,13 +5,11 @@
     <link rel="stylesheet" href="/styles/shared.css" />
     <link rel="stylesheet" href="/connect/connect.css" />
     <script src="/scripts/setting.js" defer></script>
-    <title>XOXOXO | New diary</title>
+    <title>XOXOXO | My blog | <%= diary.matchName %> | Comment</title>
   </head>
   <body>
-    <%- include('includes/navigation.ejs') %> <%- include('includes/menu.ejs')
-    %>
     <main>
-      <article>
+      <article class="body-with-no-menu">
         <h2 class="update-diary-matchName"><%= diary.matchName %></h2>
         <form
           action="/explore/<%= diary._id %>/comment"
@@ -19,7 +17,7 @@
           id="share-diary"
         >
           <div class="get-information">
-            <label for="commentTitle">Title of your comment: </label>
+            <label for="commentTitle" id="commentTitle-label">Title of your comment: </label>
             <input
               type="text"
               id="commentTitle"
@@ -28,7 +26,7 @@
             />
           </div>
           <div class="get-information">
-            <label for="commentContent">Your comment: <span></span></label>
+            <label for="commentContent" id="commentContent-label">Your comment: <span></span></label>
             <textarea id="commentContent" name="commentContent" required rows="10"></textarea>
           </div>
           <div id="button-update">

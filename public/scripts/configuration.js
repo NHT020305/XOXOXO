@@ -43,4 +43,9 @@ function saveConfiguration(event) {
   players[editedPlayer - 1].name = enteredPlayerName;
 
   closeChooseName();
+
+  if (isValid(players[0].name) && isValid(players[1].name)) { 
+    resetGame()
+  }
+
 }
