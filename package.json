@@ -4,7 +4,7 @@
   "description": "Getting started with Node and Express",
   "main": "main.js",
   "scripts": {
-    "start": "nodemon main.js"
+    "start": "npx nodemon main.js"
   },
   "author": "Huy Tung",
   "license": "ISC",
@@ -17,6 +17,6 @@
     "uuid": "^10.0.0"
   },
   "devDependencies": {
-    "nodemon": "^3.1.4"
+    "nodemon": "^3.1.7"
   }
 }
