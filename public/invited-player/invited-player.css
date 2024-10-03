@@ -1,6 +1,7 @@
 .diary-item {
   width: 70rem;
   margin-top: 10rem;
+  background: linear-gradient(45deg, #ff7900, #0055a4);
 }
 
 .add-diary {
@@ -58,7 +59,7 @@
 .comment-users h2 {
   text-align: left;
   margin-left: 10rem;
-  color: rebeccapurple;
+  color: wheat;
   font-family: "Shrikhand", serif;
   font-size: 54px;
   margin-bottom: -1rem;
@@ -70,6 +71,7 @@
   padding: 2rem;
   border-radius: 2rem;
   background-color: rgb(12, 4, 52);
+  background: linear-gradient(45deg, #ff7900, #0055a4);
   /*border: 10px solid rgb(12, 4, 52);*/
   margin-bottom: 3rem;
 }

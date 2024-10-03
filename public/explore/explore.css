@@ -1,5 +1,6 @@
 body {
   background-image: url("/images/4990858.jpg");
+  background-image: url("/images/NUS-ERC.jpg");
   margin-bottom: 1rem
 }
 
@@ -10,13 +11,15 @@ h1 {
 }
 
 .explore-intro {
+  color: wheat;
   font-size: 48px;
   margin-bottom: 2rem;
 }
 
 #no-game {
   margin: 6rem;
-  color: brown;
+  color: wheat;
+  color: linear-gradient(45deg, #ff7900, #0055a4);
   margin-top: 4rem;
   margin-bottom: 6rem;
 }
@@ -28,6 +31,7 @@ h1 {
   font-family: "Shrikhand", serif;
   font-size: 36px;
   background-color: rgb(140, 0, 255);
+  background: linear-gradient(45deg, #db43d9, #85b8e8);
   color: white;
   border: 5px solid rgb(12, 4, 52);
   box-shadow: 5px 5px rgb(12, 4, 52);
@@ -44,12 +48,13 @@ h1 {
 .add-diary:hover,
 .btn:hover {
   background-color: rebeccapurple;
+  background: linear-gradient(45deg, #6f106d, #0055a4);
   border: 5px solid rgb(12, 4, 52);
 }
 
 #numberOfMatches {
   font-family: "Shrikhand", serif;
-  color: rebeccapurple;
+  color: brown;
   font-size: 72px;
 }
 
@@ -119,6 +124,7 @@ h1 {
   text-align: center;
   color: white;
   background-color: darkgreen;
+  background: linear-gradient(45deg, #00ff48, #0055a4);
   padding: 1rem;
   width: 53rem;
   border-radius: 10px;
@@ -137,6 +143,7 @@ h1 {
   text-align: left;
   color: white;
   background-color: rgb(140, 0, 255);
+  background: linear-gradient(45deg, #6f106d, #0055a4);
   padding: 1rem;
   width: 53rem;
   border-radius: 10px;

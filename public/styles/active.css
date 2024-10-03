@@ -73,6 +73,7 @@ span {
 #game-board li {
     font-family: "Pacifico", cursive;
     background-color: rgb(215, 187, 247);
+    background: linear-gradient(45deg, #ff7900, #0055a4);
     border: 0.1rem solid rgb(12, 4, 52);
     cursor: pointer;
     display: flex;
@@ -93,6 +94,6 @@ span {
 }
 
 #game-board li.finish {
-    background-color: darkgreen;/*rgb(7, 63, 7);*/
+    background: linear-gradient(45deg, #00ff48, #0055a4);
     cursor: default;
 }

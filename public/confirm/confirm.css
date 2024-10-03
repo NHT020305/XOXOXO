@@ -1,5 +1,6 @@
 body {
   background-image: url("/images/4990858.jpg");
+  background-image: url("/images/NUS-ERC.jpg");
 }
 
 #success {
@@ -12,6 +13,7 @@ body {
 }
 
 #success p {
+  color: wheat;
   font-size: 32px;
   margin-bottom: 3rem;
 }
