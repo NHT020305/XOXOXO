@@ -50,6 +50,7 @@ span {
 
 #new-game {
     background-color: rgb(215, 187, 247);
+    background: linear-gradient(45deg, #db43d9, #85b8e8);
     border: 5px solid rgb(12, 4, 52);
     color: rgb(12, 4, 52);
     padding: 0.5rem 1rem;

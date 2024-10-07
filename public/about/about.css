@@ -64,6 +64,7 @@ main li {
 main li span {
   font-family: "Shrikhand", serif;
   color: rebeccapurple;
+  color: white;
 }
 
 .details {

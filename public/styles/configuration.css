@@ -58,6 +58,7 @@ article button {
   font-family: "Shrikhand", serif;
   font-size: 36px;
   background-color: rgb(215, 187, 247);
+  background: linear-gradient(45deg, #db43d9, #85b8e8);
   color: rgb(12, 4, 52);
   border: 0px;
   border-radius: 25px;
@@ -66,6 +67,7 @@ article button {
 
 article button:hover {
   background-color: rebeccapurple;
+  background: linear-gradient(45deg, #6f106d, #0055a4);
   border: 0px;
   color: white;
 }
@@ -76,6 +78,7 @@ article button:hover {
   font-family: "Shrikhand", serif;
   color: rgb(12, 4, 52);
   background-color: rgb(215, 187, 247);
+  background: linear-gradient(45deg, #db43d9, #85b8e8);
   border: 5px solid rgb(12, 4, 52);
   font-size: 48px;
   box-shadow: 5px 5px rgb(12, 4, 52);
@@ -84,6 +87,7 @@ article button:hover {
 
 #play:hover {
   background-color: rebeccapurple;
+  background: linear-gradient(45deg, #6f106d, #0055a4);
   color: white;
 }
 
@@ -91,8 +95,9 @@ article button:hover {
   text-decoration: none;
   border-radius: 30px;
   font-family: "Shrikhand", serif;
-  color: white;
+  color: black;
   background-color: brown;
+  background: linear-gradient(45deg, #db43d9, #85b8e8);
   border: 5px solid rgb(12, 4, 52);
   font-size: 48px;
   box-shadow: 5px 5px rgb(12, 4, 52);
@@ -101,5 +106,6 @@ article button:hover {
 
 #start:hover {
   background-color: rgb(117, 26, 26);
+  background: linear-gradient(45deg, #6f106d, #0055a4);
   color: white;
 }

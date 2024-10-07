@@ -55,6 +55,7 @@ router.get("/explore/:id", async function (req, res) {
 
 
 router.get("/explore/:id/edit", async function (req, res) {
+  
   const diaryId = req.params.id;
 
   const diary = await db
