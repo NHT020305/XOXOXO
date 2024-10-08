@@ -27,8 +27,4 @@ If all 81 cells are filled and neither player has achieved a winning combination
 
 
 ## Tech Stacks
-1. HTML
-2. CSS
-3. JavaScript
-4. Node.js
-5. MongoDB
+HTML | CSS | JavaScript | Node.js | MongoDB
