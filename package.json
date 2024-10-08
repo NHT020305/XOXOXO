@@ -4,13 +4,13 @@
   "description": "Getting started with Node and Express",
   "main": "main.js",
   "scripts": {
-    "start": "node main.js"
+    "start": "nodemon main.js"
   },
   "author": "Huy Tung",
   "license": "ISC",
   "dependencies": {
     "ejs": "^3.1.10",
-    "express": "^4.19.2",
+    "express": "^4.21.0",
     "mongodb": "^6.8.0",
     "multer": "^1.4.5-lts.1",
     "save": "^2.9.0",
